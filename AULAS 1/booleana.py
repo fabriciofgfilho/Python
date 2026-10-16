@@ -1,18 +1,14 @@
-idade = 16
-
-if idade >= 18:
-    print("Pode entrar") #NÂO executa
-
-else:
-
-    print("Bloqueado") #Executa este!
 
 
-media = float(input("Informe a média: "))
+nota = float(input("Informe a média: "))
 
-if media >= 5:
-    print ("Aprovado") 
+if nota >= 5:
+        print("Aprovado") 
+elif nota < 3:
+        print("Reprovado")
 
 else:
-    print ("Reprovado")
+        print("Recuperação")
+
     
+
