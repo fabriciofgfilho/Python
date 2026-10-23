@@ -92,17 +92,17 @@ print(f"Total de votos para o Candidato C: {votos_candidato3}")
 
 #exercicios 4
 
-# 1. Solicita a quantidade total de pessoas no grupo
+
 total_pessoas = int(input("Informe a quantidade total de pessoas no grupo: "))
 
-# Inicializando os contadores (padrão acumulador)
+
 total_masculino = 0
 total_feminino = 0
 
 
 for i in range(total_pessoas):
-    print(f"\nPessoa {i + 1}:")
-    sexo = input("Informe o sexo ('M' para masculino ou 'F' para feminino): ").strip().upper()
+    print(f"Pessoa {i + 1}:")
+    sexo = input("Informe o sexo ('M' para masculino ou 'F' para feminino): ").upper()
     
   
     if sexo == 'M':
@@ -110,17 +110,15 @@ for i in range(total_pessoas):
     elif sexo == 'F':
         total_feminino += 1
     else:
-        print("Opção inválida! Digite apenas 'M' ou 'F'. (Esta pessoa não será contabilizada)")
+        print("Invalido! Digite apenas 'M' ou 'F'." )
 
 
-print("\n--- Resultado Final da Contagem ---")
 print(f"Total de pessoas do sexo masculino: {total_masculino}")
-print(f"Total de pessoas do sexo feminino:
+print(f"Total de pessoas do sexo feminino: {total_feminino}")
 
 
 #exercicios 5
 
-# Inicializando acumuladores e contadores
 soma_idades_mulheres = 0
 qtd_mulheres = 0
 
@@ -130,18 +128,18 @@ qtd_homens = 0
 soma_total_grupo = 0
 total_pessoas = 10
 
-# Laço for para repetir exatamente 10 vezes
+
 for i in range(total_pessoas):
     print(f"\n--- Pessoa {i + 1} de 10 ---")
     
-    # Lendo os dados
+    
     idade = int(input("Informe a idade: "))
     sexo = input("Informe o sexo ('M' para masculino ou 'F' para feminino): ").strip().upper()
     
-    # Acumulando para a média geral do grupo
+  
     soma_total_grupo += idade
     
-    # Separando os cálculos por sexo
+    
     if sexo == 'F':
         soma_idades_mulheres += idade
         qtd_mulheres += 1
@@ -150,30 +148,30 @@ for i in range(total_pessoas):
         qtd_homens += 1
     else:
         print("Sexo inválido! Esta pessoa não foi contabilizada nas médias específicas.")
-        # Subtrai do total geral caso o sexo seja inválido para manter a consistência
+       
         soma_total_grupo -= idade 
 
-# Calculando e exibindo as médias (com verificação para evitar divisão por zero)
-print("\n=== RESULTADOS FINAIS ===")
 
-# Média das mulheres
+print("\nRESULTADOS ")
+
+
 if qtd_mulheres > 0:
     media_mulheres = soma_idades_mulheres / qtd_mulheres
-    print(f"Idade média das mulheres: {media_mulheres:.1f} anos")
+    print(f"Idade média das mulheres: {media_mulheres} anos")
 else:
     print("Nenhuma mulher foi cadastrada.")
 
-# Média dos homens
+
 if qtd_homens > 0:
     media_homens = soma_idades_homens / qtd_homens
-    print(f"Idade média dos homens: {media_homens:.1f} anos")
+    print(f"Idade média dos homens: {media_homens} anos")
 else:
     print("Nenhum homem foi cadastrado.")
 
-# Média do grupo (considerando apenas os registros válidos)
+
 total_validos = qtd_mulheres + qtd_homens
 if total_validos > 0:
     media_grupo = soma_total_grupo / total_validos
-    print(f"Idade média do grupo: {media_grupo:.1f} anos")
+    print(f"Idade média do grupo: {media_grupo} anos")
 else:
     print("Nenhum dado válido foi informado.")
