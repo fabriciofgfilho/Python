@@ -13,3 +13,13 @@ if var.lower() in letras:
     print(f"A Letra '{var. lower()}' está na lista")
 else:
     print(f"A Letra '{var.lower()}' NÃO esta na lista")
+
+#exemplo 3
+
+nova = []
+while True:
+    num = int(input("Digite um numero inteiro(0 para sair): "))
+    if num == 0:
+        break
+    nova. append (num)
+print(nova)
